@@ -17,6 +17,18 @@
     height: 90vh;
 }
 
+.container1{
+    display: grid;
+    grid-template-rows: 4rem 1fr 0rem;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:  
+        'S h h'
+        'S m m'
+        'f f f';
+    width: 100vw;
+    height: 90vh;
+}
+
 .header {
     grid-area: h;
 }
@@ -40,7 +52,6 @@ li a{
     font-family: 'Ubuntu', sans-serif;
 }
 
-
 .side {
     grid-area: s;
 }
@@ -49,6 +60,27 @@ li a{
     font-size: 2rem;
     color: #286983;
     text-align: center;
+}
+
+.side-with-color {
+    grid-area: S;
+    text-align: right;
+    background-color: #fffaf3;
+}
+
+.button {
+    font-size: 2rem;
+    color: #286983;
+    background-color: #fffaf3;
+}
+
+.side-note-title {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Anonymous Pro', monospace;
+    padding-bottom: 5px;
+    color: #286983;
+    background-color: #fffaf3;
 }
 
 .main {
@@ -61,10 +93,43 @@ li a{
     color: #286983;
 }
 
+.main-with-color {
+    grid-area: m;
+    align-self:center;
+    margin-left: 50px;
+    /* padding-top: 20px; */
+}
+
+.mainpart-with-color{
+    font-size: 2rem;
+    font-family: 'Anonymous Pro', monospace;
+    color: #286983;
+}
+
+.main-with-color p{
+    text-align: center;
+    display: inline-block;
+    background-color: #fffaf3;
+    font-size: 2rem;
+    padding:  0px 100px 200px;
+}
+
+.note-buttons {
+    padding-top: 10px;
+    padding-right: 30px;
+    position: fixed;
+}
+
+.note-buttons button{
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: #286983;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 footer{
     grid-area: f;
     text-align: center;
-
 }
 
 .footer-text{
@@ -74,7 +139,7 @@ footer{
 }
 
 /* Samsung s9/s9+ screen size query.*/
-@media screen and  (max-width: 360px){
+ @media screen and  (max-width: 360px){ 
     .top {
         display: flex;
         justify-content: center;
@@ -98,4 +163,28 @@ footer{
         width: 100vw;
         height: 80vh;
     }
+    .container1{
+        display: grid;
+        grid-template-rows: 4rem 1fr 0rem;
+        grid-template-columns: 100px 1fr;
+        grid-template-areas:  
+            'S h h'
+            'S m m'
+            'f f f';
+        width: 100vw;
+        height: 90vh;
+    }
+    .main-with-color {
+        margin-left: 5px;
+    }
+    .main-with-color p{
+        text-align: left;
+        display: inline-block;
+        background-color: #fffaf3;
+        font-size: 2rem;
+        padding:  0px 10px 200px;
+    }
+
+    }
 }
+
