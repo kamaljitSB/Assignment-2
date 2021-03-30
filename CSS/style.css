@@ -97,6 +97,7 @@ li a{
     grid-area: m;
     align-self:center;
     margin-left: 50px;
+    /* padding-top: 20px; */
 }
 
 .mainpart-with-color{
@@ -105,25 +106,68 @@ li a{
     color: #286983;
 }
 
-.main-with-color p{
+.main-with-color button, .side-with-color button, .main button, .side button{
+
+    border: 0;
+    line-height: 2;
+    padding: 0px 10px;
+    font-size: 1.5rem;
     text-align: center;
+    color: #faf4ed;
+    text-shadow: 1px 1px 1px ;
+    border-radius: 10px;
+    background-color: #191724;
+    box-shadow: inset 2px 2px 3px #fffaf3,
+                inset -2px -2px 3px #232136; 
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+.main button:active, .side button:active{
+    box-shadow: inset -2px -2px 3px ,
+                inset 2px 2px 3px ;
+}
+
+.main-with-color button:active, .side-with-color button:active {
+    box-shadow: inset -2px -2px 3px ,
+                inset 2px 2px 3px ;
+}
+
+.main-with-color textarea{
     display: inline-block;
     background-color: #fffaf3;
     font-size: 2rem;
-    padding:  0px 100px 200px;
+
 }
 
 .note-buttons {
     padding-top: 10px;
     padding-right: 30px;
     position: fixed;
+    
 }
 
 .note-buttons button{
-    font-size: 2rem;
-    margin-right: 2rem;
-    color: #286983;
-    font-family: 'Ubuntu', sans-serif;
+    border: 0;
+    line-height: 2.5;
+    padding: 0px 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #faf4ed;
+    text-shadow: 1px 1px 1px ;
+    border-radius: 10px;
+    background-color: #191724;
+    /* background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                  rgba(0, 0, 0, 0));*/
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6); 
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+.note-buttons button:active {
+    box-shadow: inset -2px -2px 3px ,
+                inset 2px 2px 3px ;
 }
 
 footer{
@@ -151,7 +195,6 @@ footer{
     li a{
         font-size: 2rem;
     }
-     
     .container{
         display: grid;
         grid-template-rows: 4rem 1fr 0rem;
@@ -163,23 +206,20 @@ footer{
         width: 100vw;
         height: 80vh;
     }
-     
     .container1{
         display: grid;
         grid-template-rows: 4rem 1fr 0rem;
         grid-template-columns: 100px 1fr;
         grid-template-areas:  
             'S h h'
-            'S m m'
+            'm m m'
             'f f f';
         width: 100vw;
         height: 90vh;
     }
-     
     .main-with-color {
         margin-left: 5px;
     }
-     
     .main-with-color p{
         text-align: left;
         display: inline-block;
@@ -187,5 +227,7 @@ footer{
         font-size: 2rem;
         padding:  0px 10px 200px;
     }
-}
+
+    }
+
 
