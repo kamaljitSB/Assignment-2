@@ -55,6 +55,7 @@ cancel_btn.addEventListener('click',()=>{
     txt_area.remove()
     save_btn.remove()
     cancel_btn.remove()
+    txt_area.value = ""
 })
 
 function DisplayNotes(newObject){
